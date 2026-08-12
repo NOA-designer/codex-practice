@@ -83,17 +83,14 @@ h1 {
   gap: 16px;
 }
 
-.photo-placeholder {
-  display: grid;
+.photo-list img {
+  display: block;
+  width: 100%;
   aspect-ratio: 1;
-  place-items: center;
-  background-color: #f2f2f2;
-  color: #a0a0a0;
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  object-fit: cover;
 }
 
-/* 画面が狭いときは、余白と写真の間隔を小さくします */
+/* 画面が狭いときは、写真を縦に並べて見やすくします */
 @media (max-width: 600px) {
   .profile {
     width: min(100% - 24px, 920px);
@@ -105,11 +102,7 @@ h1 {
   }
 
   .photo-list {
-    gap: 6px;
-  }
-
-  .photo-placeholder {
-    font-size: 0.65rem;
-    letter-spacing: 0.08em;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
