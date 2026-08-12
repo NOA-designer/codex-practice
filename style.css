@@ -90,6 +90,19 @@ h1 {
   object-fit: cover;
 }
 
+/* 写真ごとに料理の位置へ焦点を合わせます */
+.photo-okra {
+  object-position: center 58%;
+}
+
+.photo-omelette {
+  object-position: center 57%;
+}
+
+.photo-hotate {
+  object-position: center 60%;
+}
+
 /* 画面が狭いときは、写真を縦に並べて見やすくします */
 @media (max-width: 600px) {
   .profile {
@@ -104,5 +117,10 @@ h1 {
   .photo-list {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .photo-list img {
+    /* 縦長寄りにして、料理全体が見えやすい比率にします */
+    aspect-ratio: 4 / 5;
   }
 }
